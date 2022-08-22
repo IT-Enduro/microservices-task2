@@ -717,7 +717,7 @@
 					"variable": [
 						{
 							"key": "ticketUid",
-							"value": "{{ticketUrl}}",
+							"value": "{{ticketUid}}",
 							"description": "UUID билета"
 						}
 					]
