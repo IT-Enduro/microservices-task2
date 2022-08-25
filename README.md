@@ -26,10 +26,14 @@
 2. Создаем приложение: `Applications` -> `Create Application`: `Native`, заходим в созданное приложение и
    копируем `Client ID` и `Client Secret`.
 3. Переходим в `Advanced Settings` -> `Grant Types`: только `Password` (Resource Owner Password Flow).
-4. Настраиваем хранилище паролей: `Settings` -> `Tenant Settings` -> `API Authorization Settings`:
-    * Default Audience: `https://<your-account-name>.eu.auth0.com/api/v2/`;
+4. Переходим в `API` -> `Create API`:
+    * Name: `Cinema Aggregator Service`;
+    * Identifier: `http://ciname-aggregator-<your-name>.ru`;
+    * Signing Algorithm: HS256.
+5. Настраиваем хранилище паролей: `Settings` -> `Tenant Settings` -> `API Authorization Settings`:
+    * Default Audience: `http://ciname-aggregator-<your-name>.ru`;
     * Default Directory: `Username-Password-Authentication`.
-5. Создаем тестового пользователя: `User Management` -> `Users` -> `Create User`:
+6. Создаем тестового пользователя: `User Management` -> `Users` -> `Create User`:
     * Email: `user@mail.ru`;
     * Password: `Qwerty123`;
     * Connection: `Username-Password-Authentication`.
