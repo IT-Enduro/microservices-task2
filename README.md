@@ -1,6 +1,5 @@
 # Домашняя работа #2
 
-[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 ![GitHub Classroom Workflow](../../workflows/GitHub%20Classroom%20Workflow/badge.svg?branch=master)
 
 ## Authorization
@@ -11,11 +10,11 @@
 
 1. Для авторизации использовать OpenID Connect, в роли Identity Provider использовать [Auth0](https://auth0.com).
 2. На Ticket Service реализовать метод `GET /api/v1/authorize` получения токена (`username` и `password` пользователя
-   передаем как в Header Authorization как Base Authentication.
+   передаем в Header `Authorization` как Basic Authorization.
 3. При запросе на получение токена Ticket Service берет `username` и `password` из запроса, `Client Id`
    и `Client Secret` из настроек приложения и обращается к Identity Provider для получения токена.
 4. Все остальные методы `/api/**` на всех сервисах закрыть token-based авторизацией.
-5. Убрать заголовок X-User-Name и получать пользователя из JWT-токена.
+5. Убрать заголовок `X-User-Name` и получать пользователя из JWT-токена.
 6. Если авторизация некорректная (отсутствует токен, ошибка валидации JWT токена, закончилось время жизни токена (поле
    exp в payload)), то отдавать 401 ошибку.
 7. Проверку токена выполнять в Ticket Service через JWKs.
