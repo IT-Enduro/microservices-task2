@@ -6,7 +6,7 @@
 
 ### Формулировка
 
-На базе Лабораторной работы #2 реализовать OAuth2 token-based авторизацию.
+На базе Домашней работы #1 реализовать OAuth2 token-based авторизацию.
 
 1. Для авторизации использовать OpenID Connect, в роли Identity Provider использовать [Auth0](https://auth0.com).
 2. На Ticket Service реализовать метод `GET /api/v1/authorize` получения токена (`username` и `password` пользователя
